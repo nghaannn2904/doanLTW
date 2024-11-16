@@ -1,4 +1,6 @@
-﻿/* Set padding to keep content from hitting the edges */
+﻿
+
+/* Set padding to keep content from hitting the edges */
 .body-content {
     margin-top: 15px;
     padding-left: 15px;
@@ -18,3 +20,83 @@ select,
 textarea {
     max-width: 280px;
 }
+/*Menu Order*/
+.icon-coffeebean {
+    color: gray;
+    padding: 0 3px;
+    align-items: center;
+    text-align: center;
+}
+
+.coffee_img {
+    padding: 20px;
+}
+
+.price-pro {
+    font-weight: 500;
+    color: rgb(74,73,73);
+}
+
+.types_text {
+    color: rgb(74,73,73);
+}
+
+.coffee_title {
+    color: rgb(165, 42, 42);
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.types_text:hover {
+    color: rgb(251,121,95);
+}
+
+.alata-regular {
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*Chi tiết sp*/
+
+.detail-pro .product-content {
+    margin: 10px 10px;
+    padding: 30px 50px 30px 0;
+    text-align: left;
+    display: block;
+}
+
+.detail-pro .product-content-left {
+    width: 60%;
+}
+
+.detail-pro .product-content-right {
+    width: 40%;
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.detail-pro .main-content {
+    margin: 10px;
+    padding: 30px 2px 0 20px;
+    text-align: left;
+}
+
+.detail-pro .pro_img {
+    width: 350px;
+    height: 350px;
+    margin: 20px 50px;
+    border-radius: 25px;
+}
+
+.detail-pro .title-product {
+    color: rgb(165, 42, 42);
+    font-weight: 700;
+}
+
+ detail-pro .desciption {
+    text-align: left;
+}
+  

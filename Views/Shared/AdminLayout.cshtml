@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/admin.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="@Url.Action("ThemSanPham", "SanPham")">Thêm Sản Phẩm</a></li>
+            <li><a href="@Url.Action("Blog", "Blog")">Blog</a></li>
+            <li><a href="@Url.Action("Contact", "Contact")">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+</body>
+</html>

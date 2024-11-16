@@ -21,7 +21,6 @@
                                     <p class="banner_text">more-or-less normal distribution of letters, as opposed to using </p>
                                     <div class="btn_main">
                                         <div class="about_bt"><a href="#">About Us</a></div>
-                                        <div class="callnow_bt active"><a href="#">Call Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -39,7 +38,6 @@
                                     <p class="banner_text">more-or-less normal distribution of letters, as opposed to using </p>
                                     <div class="btn_main">
                                         <div class="about_bt"><a href="#">About Us</a></div>
-                                        <div class="callnow_bt active"><a href="#">Call Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -57,42 +55,23 @@
                                     <p class="banner_text">more-or-less normal distribution of letters, as opposed to using </p>
                                     <div class="btn_main">
                                         <div class="about_bt"><a href="#">About Us</a></div>
-                                        <div class="callnow_bt active"><a href="#">Call Now</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev">
-                    <i class="fa fa-arrow-left"></i>
-                </a>
-                <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next">
-                    <i class="fa fa-arrow-right"></i>
-                </a>
             </div>
         </div>
     </div>
 }
 <!-- banner section end -->
 <!-- header section end -->
-@*@{
-        foreach (var blog in Model.listBlog1)
-                {
-                    <div>
-                        <h2>@blog.Title</h2>
-                        <h3>@blog.Id</h3>
-                        <p>
-                            @blog.Description
-                        </p>
-                    </div>
-                }
-    }*@
 <!-- coffee section start -->
 <div class="coffee_section layout_padding">
     <div class="container">
         <div class="row">
-            <h1 class="coffee_taital">OUR Coffee OFFER</h1>
+            <h1 class="coffee_taital">Best Seller</h1>
             <div class="bulit_icon"><img src="~/Content/images/bulit-icon.png"></div>
         </div>
     </div>
@@ -100,89 +79,26 @@
         <div id="main_slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-lg-3 col-md-6">
+                            @*@foreach (var item in Model.listProduct1.Take(3))
+                            { 
+                            <div class="col-lg-4 col-md-6">
                                 <div class="coffee_img"><img src="~/Content/images/img-1.png"></div>
-                                <h3 class="types_text">TYPES OF COFFEE</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
+                                <h3 class="types_text">@item.ProductName</h3>
+                                <p class="looking_text">@item.Short_Desc</p>
+                                <div class="read_bt"><a href="#">Chi tiết</a></div>
                             </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-2.png"></div>
-                                <h3 class="types_text">BEAN VARIETIES</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-3.png"></div>
-                                <h3 class="types_text">COFFEE & PASTRY</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-4.png"></div>
-                                <h3 class="types_text">COFFEE TO GO</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
+                            }*@
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-4 col-md-6">
                                 <div class="coffee_img"><img src="~/Content/images/img-1.png"></div>
-                                <h3 class="types_text">TYPES OF COFFEE</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-2.png"></div>
-                                <h3 class="types_text">BEAN VARIETIES</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-3.png"></div>
-                                <h3 class="types_text">COFFEE & PASTRY</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-4.png"></div>
-                                <h3 class="types_text">COFFEE TO GO</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-1.png"></div>
-                                <h3 class="types_text">TYPES OF COFFEE</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-2.png"></div>
-                                <h3 class="types_text">BEAN VARIETIES</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-3.png"></div>
-                                <h3 class="types_text">COFFEE & PASTRY</h3>
-                                <p class="looking_text">looking at its layout. The point of</p>
-                                <div class="read_bt"><a href="#">Read More</a></div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="coffee_img"><img src="~/Content/images/img-4.png"></div>
-                                <h3 class="types_text">COFFEE TO GO</h3>
+                                <h3 class="types_text">Trà sữa trân châu</h3>
                                 <p class="looking_text">looking at its layout. The point of</p>
                                 <div class="read_bt"><a href="#">Read More</a></div>
                             </div>
@@ -205,15 +121,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="about_taital">About Our shop</h1>
+                <h1 class="about_taital">About Us</h1>
                 <div class="bulit_icon"><img src="~/Content/images/bulit-icon.png"></div>
             </div>
         </div>
         <div class="about_section_2 layout_padding">
             <div class="image_iman"><img src="~/Content/images/about-img.png" class="about_img"></div>
             <div class="about_taital_box">
-                <h1 class="about_taital_1">Coffee distribution '</h1>
-                <p class=" about_text">has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editorhas a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editor</p>
+                <h1 class="about_taital_1">Our Us</h1>
+                <p class=" about_text">
+                    Chào mừng bạn đến với quán cà phê của chúng tôi, một nơi ấm cúng bắt đầu hành trình của mình từ những ngày đầu.
+                    Điều gì bắt đầu từ ước mơ của một đội ngũ nhỏ những người yêu thích cà phê, nay đã trở thành một điểm đến thân thuộc trong cộng đồng.
+                    Nổi bật với không gian ấm cúng và những ly cà phê tuyệt vời được lấy từ các nông trại địa phương....
+                </p>
                 <div class="readmore_btn"><a href="#">Read More</a></div>
             </div>
         </div>
@@ -225,36 +145,45 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="about_taital">What syas customers</h1>
+                <h1 class="about_taital">Founders</h1>
                 <div class="bulit_icon"><img src="~/Content/images/bulit-icon.png"></div>
             </div>
         </div>
         <div class="client_section_2">
-            <div class="client_taital_main">
+            <div class="client_taital_main" style="align-items: center;">
                 <div class="client_left">
-                    <div class="client_img"><img src="~/Content/images/client-img1.png"></div>
+                    <div class="client_img"><img src="~/Content/images/f1-img.jpg"></div>
                 </div>
                 <div class="client_right">
-                    <h3 class="moark_text">Joy Moark</h3>
-                    <p class="client_text">now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancynow use Lorem Ipsum as their default model text, </p>
+                    <h3 class="moark_text">Quỳnh Anh Trần</h3>
+                    <p class="client_text">
+                        Xin chào, mình là Quỳnh Anh Trần, người sáng lập và là người lên ý tưởng cho thực đơn của Doze Cafe.<br />
+                        Là một người đã có cơ hội trải nghiệm rất nhiều món ăn và thức uống từ khắp nơi, mình tin rằng mỗi ly cà phê đều có câu chuyện riêng. Doze Cafe không chỉ là nơi thưởng thức cà phê, mà còn là nơi chúng mình kể những câu chuyện qua hương vị trong từng ly.
+                    </p>
                 </div>
             </div>
-            <div class="client_taital_main">
+            <div class="client_taital_main" style="align-items: center;">
                 <div class="client_left">
-                    <div class="client_img"><img src="~/Content/images/client-img2.png"></div>
+                    <div class="client_img"><img src="~/Content/images/f2-img.jpg"></div>
                 </div>
                 <div class="client_right">
-                    <h3 class="moark_text">Mihacal</h3>
-                    <p class="client_text">now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancynow use Lorem Ipsum as their default model text, </p>
+                    <h3 class="moark_text">My Lê</h3>
+                    <p class="client_text">
+                        Chào, mình là My Lê, đồng sáng lập Doze Cafe.<br />
+                        Từng có cơ hội khám phá văn hóa cà phê tại nhiều quốc gia, đặc biệt là những quán cà phê cổ kính ở châu Âu, mình rất yêu thích không khí thư giãn và yên bình trong các quán cà phê nhỏ xinh. Với Doze Cafe, mình muốn tạo nên một không gian như một nơi dừng chân thư giãn, nơi bạn có thể thoải mái tận hưởng từng khoảnh khắc bên ly cà phê giữa nhịp sống bận rộn.
+                    </p>
                 </div>
             </div>
-            <div class="client_taital_main">
+            <div class="client_taital_main" style="align-items: center;">
                 <div class="client_left">
-                    <div class="client_img"><img src="~/Content/images/client-img3.png"></div>
+                    <div class="client_img"><img src="~/Content/images/f3-img.jpg"></div>
                 </div>
                 <div class="client_right">
-                    <h3 class="moark_text">Uliya den</h3>
-                    <p class="client_text">now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancynow use Lorem Ipsum as their default model text, </p>
+                    <h3 class="moark_text">Linh Đỗ</h3>
+                    <p class="client_text">
+                        Mình là Linh Đỗ, đồng sáng lập Doze Cafe.<br />
+                        Sinh ra ở Đà Lạt, nơi cà phê được trồng trên những đồi đất đỏ bazan, và mùi hương của cà phê rang luôn gắn liền với ký ức tuổi thơ. Sau khi học nghệ thuật tại Sài Gòn, mình quyết định quay về và mở Doze Cafe – nơi mình có thể sáng tạo những món cà phê không chỉ ngon mà còn đầy cảm hứng. Tại Doze Cafe, mình muốn mang đến những ly cà phê đậm chất Đà Lạt, sáng tạo và đầy cảm xúc.
+                    </p>
                 </div>
             </div>
         </div>
@@ -275,18 +204,33 @@
                 <div class="col-md-6">
                     <div class="blog_box">
                         <div class="blog_img"><img src="~/Content/images/blog-img1.png"></div>
-                        <h4 class="date_text">05 April</h4>
-                        <h4 class="prep_text">PREP TECHNIQUES Coffee</h4>
-                        <p class="lorem_text">distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moredistracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more</p>
+                        <h4 class="prep_text">Khám Phá Doze Cafe</h4>
+                        <p class="lorem_text">
+                            Nằm giữa lòng thành phố nhộn nhịp, Doze Cafe là một góc nhỏ ấm cúng,
+                            mang đến không gian thư giãn với những tách cà phê đậm đà,
+                            thơm ngát và bộ sưu tập các món ăn thủ công tinh tế.
+                            Đây là nơi lý tưởng để tạm ngừng nhịp sống bận rộn,
+                            gặp gỡ bạn bè, hoặc đơn giản là để khơi nguồn cảm hứng.
+                            Mỗi tách cà phê tại đây đều đem lại cảm giác thoải mái,
+                            thư thái, như một người bạn đồng hành dễ chịu.
+                            Hãy ghé thăm và biến Doze Cafe thành điểm đến yêu thích mới của bạn
+                        </p>
                     </div>
                     <div class="read_bt"><a href="#">Read More</a></div>
                 </div>
                 <div class="col-md-6">
                     <div class="blog_box">
                         <div class="blog_img"><img src="~/Content/images/blog-img2.png"></div>
-                        <h4 class="date_text">05 April</h4>
-                        <h4 class="prep_text">PREP TECHNIQUES Coffee</h4>
-                        <p class="lorem_text">distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moredistracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more</p>
+                        <h4 class="prep_text">Thưởng Thức Hương Vị Tại Doze Cafe</h4>
+                        <p class="lorem_text">
+                            Tại Doze Cafe, mỗi tách cà phê được chế biến từ những hạt cà phê được chọn lọc kỹ lưỡng,
+                            mang đến hương vị đậm đà và trọn vẹn trong từng ngụm.
+                            Từ espresso đặc trưng đến những ly latte béo ngậy và cold brew mát lạnh,
+                            chúng tôi cam kết mang đến chất lượng vượt trội.
+                            Hãy kết hợp cà phê của bạn với một trong những món bánh mới ra lò để có trải nghiệm hoàn hảo.
+                            Thưởng thức hương vị chất lượng tại Doze Cafe
+                            trong không gian đầy cảm hứng và thư giãn, phù hợp mọi sở thích!
+                        </p>
                     </div>
                     <div class="read_bt"><a href="#">Read More</a></div>
                 </div>
@@ -313,13 +257,13 @@
                         <input type="text" class="mail_text" placeholder="Your Name" name="Your Name">
                         <input type="text" class="mail_text" placeholder="Your Email" name="Your Email">
                         <input type="text" class="mail_text" placeholder="Your Phone" name="Your Phone">
-                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                        <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Massage"></textarea>
                         <div class="send_bt"><a href="#">SEND</a></div>
                     </div>
                 </div>
                 <div class="map_main">
                     <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="250" height="500" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2901094780173!2d106.59805157488383!3d10.865525089288685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b088de30f3b%3A0xd2140740d360f705!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOZ2_huqFpIG5n4buvIC0gVGluIGjhu41jIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCAoSFVGTElUKSBDxqEgc-G7nyBIw7NjIE3DtG4!5e0!3m2!1svi!2s!4v1730569379375!5m2!1svi!2s" width="250" height="500" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>

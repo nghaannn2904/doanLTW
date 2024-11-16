@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "thanhtoan";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="banner_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="about_taital">Giỏ Hàng</h1>
+            </div>
+            <table style="width: 91.67%; border-collapse: collapse; border: 1px solid #ddd; margin: auto; table-layout: fixed;">
+                <thead>
+                    <tr style="background-color: #f8f8f8;">
+                        <th style="padding: 8px; border: 1px solid #ddd; word-wrap: break-word;">Sản Phẩm</th>
+                        <th style="padding: 8px; border: 1px solid #ddd; word-wrap: break-word;">Hình Ảnh</th>
+                        <th style="padding: 8px; border: 1px solid #ddd; word-wrap: break-word;">Đơn Giá</th>
+                        <th style="padding: 8px; border: 1px solid #ddd; word-wrap: break-word;">Số Lượng</th>
+                        <th style="padding: 8px; border: 1px solid #ddd; word-wrap: break-word;">Số Tiền</th>
+                        <th style="padding: 8px; border: 1px solid #ddd; word-wrap: break-word;">Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">matcha sữa gấu</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><img src="~/Content/images/cafe1.png" alt="matcha suagau" style="width: 50px; height: 50px;"></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;" class="unit-price">50,000đ</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><input type="number" class="quantity" value="1" min="1" style="width: 50px;" onchange="updateTotal()"></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;" class="total-price">50,000đ</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><button style="background-color: #d9534f; color: #fff; border: none; padding: 5px; cursor: pointer;">Xóa</button></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">bạc xĩu</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><img src="bacxiu-image.jpg" alt="bac xiu" style="width: 50px; height: 50px;"></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;" class="unit-price">25,000đ</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><input type="number" class="quantity" value="1" min="1" style="width: 50px;" onchange="updateTotal()"></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;" class="total-price">25,000đ</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><button style="background-color: #d9534f; color: #fff; border: none; padding: 5px; cursor: pointer;">Xóa</button></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">cà phê đen</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><img src="caphe-den-image.jpg" alt="cà phê đen" style="width: 50px; height: 50px;"></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;" class="unit-price">20,000đ</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><input type="number" class="quantity" value="1" min="1" style="width: 50px;" onchange="updateTotal()"></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;" class="total-price">20,000đ</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><button style="background-color: #d9534f; color: #fff; border: none; padding: 5px; cursor: pointer;">Xóa</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="text-align: center; margin-top: 20px; border: 1px solid #ddd; padding: 10px; width: calc(100% - 10px); margin-left: 5px;">
+                <strong>Tổng thanh toán:</strong> <span id="grand-total">0đ</span>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button style="background-color: #5cb85c; color: #fff; border: none; padding: 10px 20px; cursor: pointer;">Mua Hàng</button>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                updateTotal();
+            });
+
+            function updateTotal() {
+                const rows = document.querySelectorAll('tbody tr');
+                let grandTotal = 0;
+
+                rows.forEach(row => {
+                    const unitPrice = parseInt(row.querySelector('.unit-price').innerText.replace(/[₫,]/g, '')) || 0;
+                    let quantity = parseInt(row.querySelector('.quantity').value) || 1;
+
+                    if (quantity > 20) {
+                        alert("Nếu bạn muốn mua sĩ, vui lòng liên hệ với chúng tôi.");
+                        quantity = 20;
+                        row.querySelector('.quantity').value = quantity;
+                    }
+
+                    const totalPrice = unitPrice * quantity;
+                    row.querySelector('.total-price').innerText = totalPrice.toLocaleString() + 'đ';
+                    grandTotal += totalPrice;
+                });
+
+                document.getElementById('grand-total').innerText = grandTotal.toLocaleString() + 'đ';
+            }
+        </script>
+    </div>
+</div>

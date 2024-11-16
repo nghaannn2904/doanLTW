@@ -8,12 +8,31 @@ namespace online_coffee.Controllers
 {
     public class BlogController : Controller
     {
-        // GET: Blog
         public ActionResult Index()
         {
             return View("Blog");
         }
         public ActionResult Blog()
+        {
+            return View();
+        }
+        public ActionResult Text1()
+        {
+            return View();
+        }
+        public ActionResult Text2()
+        {
+            return View();
+        }
+        public ActionResult Text3()
+        {
+            return View();
+        }
+        public ActionResult Text4()
+        {
+            return View();
+        }
+        public ActionResult Text5()
         {
             return View();
         }

@@ -33,7 +33,7 @@
     <!-- header section star -->
     <div class="header_section">
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="/Home"><img src="~/Content/images/logo.png"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -50,9 +50,6 @@
                             <a class="nav-link" href="/Coffee">Coffees</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Shop">Shop</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="/Blog">Blog</a>
                         </li>
                         <li class="nav-item">
@@ -62,8 +59,8 @@
                     <form class="form-inline my-2 my-lg-0">
                         <div class="login_bt">
                             <ul>
-                                <li><a href="#"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span>Login</a></li>
-                                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                <li><a href="User/Login"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span>Login</a></li>
+                                <li><a href="/Coffee/thanhtoan"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </form>
@@ -78,25 +75,25 @@
     @RenderBody();
     <!-- footer section start -->
     <div class="footer_section layout_padding">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="address_text">Address</h1>
-                    <p class="footer_text">here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use </p>
+                    <p class="footer_text">806 QL22, ấp Mỹ Hoà 3, Hóc Môn, Hồ Chí Minh, Việt Nam</p>
                     <div class="location_text">
                         <ul>
                             <li>
-                                <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">+01 1234567890</span>
+                                <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">1800 6779</span>
                             </li>
                             <li>
-                                <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">demo@gmail.com</span>
+                                <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">dozecafe@gmail.com</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="form-group">
+                    @*<div class="form-group">
                         <textarea class="update_mail" placeholder="Your Email" rows="5" id="comment" name="Your Email"></textarea>
                         <div class="subscribe_bt"><a href="#"><img src="~/Content/images/teligram-icon.png"></a></div>
-                    </div>
+                    </div>*@
                 </div>
             </div>
         </div>

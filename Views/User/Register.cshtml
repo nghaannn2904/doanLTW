@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div style="margin: 10px auto; width: 70%;">
+    <h2 style="text-align: center">ĐĂNG KÍ TÀI KHOẢN</h2>
+    <h2 style="color: red;">@ViewBag.ThongBao</h2>
+    @using (Html.BeginForm("Register", "User"))
+    {
+        @Html.ValidationSummary(true)
+        <div class="mb-3 mt-3">
+            <label for="name" class="form-label">TÊN:</label>
+            <input type="text" class="form-control" id="name" name="LoginName" required>
+        </div>
+        <div class="mb-3">
+            <label for="pwd" class="form-label">PASSWORD:</label>
+            <input type="password" class="form-control" id="pwd" name="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">XÁC NHẬN</button>
+    }
+</div>
+

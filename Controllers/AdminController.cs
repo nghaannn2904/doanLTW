@@ -6,13 +6,12 @@ using System.Web.Mvc;
 
 namespace online_coffee.Controllers
 {
-    public class AboutController : Controller
+    public class AdminController : Controller
     {
-        // GET: About
+        // GET: Admin
         public ActionResult Index()
         {
-            return View("About");
+            return View();
         }
-        
     }
 }
